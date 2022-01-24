@@ -29,7 +29,7 @@
 
             android:layout_marginTop="12dp"
 
-            android:drawableStart="@drawable/ic_baseline_add_circle"
+            android:drawableEnd="@drawable/ic_baseline_add_circle"
             style="@style/MenuButton"
             android:text="@string/btn_create_appointment"/>
         <Button
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
 
             android:layout_marginTop="12dp"
-            android:drawableStart="@drawable/ic_baseline_schedule"
+            android:drawableEnd="@drawable/ic_baseline_calendar_today"
             style="@style/MenuButton"
             android:text="@string/btn_my_appointment"/>
         <Button
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
 
             android:layout_marginTop="12dp"
-            android:drawableStart="@drawable/ic_power_off"
+            android:drawableEnd="@drawable/ic_power_off"
             style="@style/MenuButton"
 
             android:text="@string/btn_log_out"/>
