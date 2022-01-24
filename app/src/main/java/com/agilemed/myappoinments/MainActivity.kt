@@ -8,8 +8,14 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import com.agilemed.myappoinments.PreferenceHelper.get
 import com.agilemed.myappoinments.PreferenceHelper.set
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+
+    private val snackbar by lazy {
+        Snackbar.make(mainLayout,R.string.press_back_again,Snackbar.LENGTH_SHORT)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -51,5 +57,12 @@ class MainActivity : AppCompatActivity() {
         val intent= Intent(this,MenuActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onBackPressed() {
+        if(snackbar.isShown)
+            super.onBackPressed()
+        else
+            snackbar.show()
     }
 }
