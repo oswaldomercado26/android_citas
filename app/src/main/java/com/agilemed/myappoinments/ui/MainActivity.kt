@@ -1,19 +1,20 @@
-package com.agilemed.myappoinments
+package com.agilemed.myappoinments.ui
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.agilemed.myappoinments.util.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_main.*
-import com.agilemed.myappoinments.PreferenceHelper.get
-import com.agilemed.myappoinments.PreferenceHelper.set
+import com.agilemed.myappoinments.util.PreferenceHelper.get
+import com.agilemed.myappoinments.util.PreferenceHelper.set
+import com.agilemed.myappoinments.R
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
     private val snackbar by lazy {
-        Snackbar.make(mainLayout,R.string.press_back_again,Snackbar.LENGTH_SHORT)
+        Snackbar.make(mainLayout, R.string.press_back_again,Snackbar.LENGTH_SHORT)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         /*val preferences= getSharedPreferences("general", Context.MODE_PRIVATE)
         val session=preferences.getBoolean("active_session",false)
         */
-        val preferences=PreferenceHelper.defaultPrefs(this)
+        val preferences= PreferenceHelper.defaultPrefs(this)
 
         if(preferences["session",false ])
             goToMenuActivity()
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
         tvGoToRegister.setOnClickListener{
             Toast.makeText(this,getString(R.string.please_fill_your_register_data),Toast.LENGTH_SHORT).show()
-            val intent= Intent(this,RegisterActivity::class.java)
+            val intent= Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
@@ -48,13 +49,13 @@ class MainActivity : AppCompatActivity() {
         val editor=preferences.edit()
         editor.putBoolean("session",true)
         editor.apply()*/
-        val preferences=PreferenceHelper.defaultPrefs(this)
+        val preferences= PreferenceHelper.defaultPrefs(this)
         preferences["session"]=true
 
     }
 
     private fun goToMenuActivity(){
-        val intent= Intent(this,MenuActivity::class.java)
+        val intent= Intent(this, MenuActivity::class.java)
         startActivity(intent)
         finish()
     }

@@ -1,4 +1,4 @@
-package com.agilemed.myappoinments
+package com.agilemed.myappoinments.util
 
 import android.content.Context
 import android.content.SharedPreferences

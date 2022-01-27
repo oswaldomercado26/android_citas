@@ -1,10 +1,11 @@
-package com.agilemed.myappoinments
+package com.agilemed.myappoinments.ui
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.agilemed.myappoinments.PreferenceHelper.set
+import com.agilemed.myappoinments.util.PreferenceHelper
+import com.agilemed.myappoinments.util.PreferenceHelper.set
+import com.agilemed.myappoinments.R
 import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity() {
@@ -13,18 +14,18 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
         btnCreateAppointment.setOnClickListener {
-            val intent =Intent(this,CreateAppointmentActivity::class.java)
+            val intent =Intent(this, CreateAppointmentActivity::class.java)
             startActivity(intent)
         }
 
         btnMyAppointments.setOnClickListener {
-            val intent =Intent(this,AppointmentsActivity::class.java)
+            val intent =Intent(this, AppointmentsActivity::class.java)
             startActivity(intent)
         }
 
         btnLogout.setOnClickListener {
             clearSessionPreference()
-            val intent =Intent(this,MainActivity::class.java)
+            val intent =Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -35,7 +36,7 @@ class MenuActivity : AppCompatActivity() {
         val editor=preferences.edit()
         editor.putBoolean("session",false)
         editor.apply()*/
-        val preferences=PreferenceHelper.defaultPrefs(this)
+        val preferences= PreferenceHelper.defaultPrefs(this)
         preferences["session"]=false
     }
 

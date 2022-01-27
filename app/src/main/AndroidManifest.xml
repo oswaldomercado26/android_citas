@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.agilemed.myappoinments">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myappoinments">
         <activity
-            android:name=".AppointmentsActivity"
+            android:name=".ui.AppointmentsActivity"
             android:exported="false"
-            android:parentActivityName=".MenuActivity"/>
+            android:parentActivityName=".ui.MenuActivity"/>
         <activity
-            android:name=".CreateAppointmentActivity"
+            android:name=".ui.CreateAppointmentActivity"
             android:exported="false"
-            android:parentActivityName=".MenuActivity"/>
+            android:parentActivityName=".ui.MenuActivity"/>
         <activity
-            android:name=".MenuActivity"
+            android:name=".ui.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.RegisterActivity"
             android:exported="false" android:launchMode="singleInstance" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true" android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

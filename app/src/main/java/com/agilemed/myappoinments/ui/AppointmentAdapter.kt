@@ -1,9 +1,10 @@
-package com.agilemed.myappoinments
+package com.agilemed.myappoinments.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.agilemed.myappoinments.R
 import com.agilemed.myappoinments.model.Appointment
 import kotlinx.android.synthetic.main.item_appointment.view.*
 
