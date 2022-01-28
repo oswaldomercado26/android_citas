@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.agilemed.myappoinments">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,22 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myappoinments">
         <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.AppointmentsActivity"
             android:exported="false"
-            android:parentActivityName=".ui.MenuActivity"/>
+            android:parentActivityName=".ui.MenuActivity" />
         <activity
             android:name=".ui.CreateAppointmentActivity"
             android:exported="false"
-            android:parentActivityName=".ui.MenuActivity"/>
+            android:parentActivityName=".ui.MenuActivity" />
         <activity
             android:name=".ui.MenuActivity"
             android:exported="false" />
         <activity
             android:name=".ui.RegisterActivity"
-            android:exported="false" android:launchMode="singleInstance" />
+            android:exported="false"
+            android:launchMode="singleInstance" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true" android:launchMode="singleInstance">
+            android:exported="true"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

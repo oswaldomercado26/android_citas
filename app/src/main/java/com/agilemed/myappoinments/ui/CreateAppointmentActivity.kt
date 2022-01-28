@@ -12,6 +12,7 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.agilemed.myappoinments.util.PreferenceHelper
+import com.agilemed.myappoinments.util.PreferenceHelper.get
 import com.agilemed.myappoinments.R
 import com.agilemed.myappoinments.io.ApiService
 import com.agilemed.myappoinments.io.response.SimpleResponse

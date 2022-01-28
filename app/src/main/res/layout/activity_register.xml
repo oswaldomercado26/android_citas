@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical"
     tools:context=".ui.RegisterActivity">
 
@@ -16,7 +16,7 @@
         android:layout_height="0dp"
         android:textColor="@color/white"
         android:layout_weight="1"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:text="@string/label_register"/>
 
     <LinearLayout
@@ -26,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -34,11 +33,12 @@
             android:text="@string/label_name"/>
 
         <EditText
-
+            android:id="@+id/etRegisterName"
             android:textColor="@color/white"
             android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:text="@string/label_email"/>
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etRegisterEmail"
             android:textColor="@color/white"
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
@@ -61,13 +61,27 @@
             android:text="@string/label_password"/>
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etRegisterPassword"
             android:textColor="@color/white"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <Button android:id="@+id/btnLogin"
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_password_confirmation"/>
+
+        <EditText
+            android:id="@+id/etRegisterPasswordConfirmation"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/btnConfirmRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"

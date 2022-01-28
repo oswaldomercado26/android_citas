@@ -71,6 +71,7 @@
     <string name="btn_next">Siguiente</string>
     <string name="label_doctor">Doctor</string>
     <string name="label_scheduled_date">Fecha de la cita</string>
+    <string name="btn_my_appointments">Mis citas</string>
 
 
 </resources>
